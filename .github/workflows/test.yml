@@ -11,4 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      # delete preexisting one
+      - run: sudo rm -fr /usr/local/aws-cli
       - uses: ./
