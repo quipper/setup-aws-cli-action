@@ -15,6 +15,7 @@ jobs:
       # delete preexisting one
       - run: sudo rm -fr /usr/local/aws-cli
       - uses: ./
+      - run: aws --version
 
   when-aws-cli-already-exists:
     runs-on: ubuntu-latest
@@ -22,6 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./
+      - run: aws --version
 
   in-container:
     runs-on: ubuntu-latest
@@ -33,3 +35,4 @@ jobs:
       - run: apt-get update
       - run: apt-get install -y sudo unzip curl
       - uses: ./
+      - run: aws --version
