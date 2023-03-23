@@ -27,9 +27,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     container:
-      image: cypress/browsers:node18.12.0-chrome107
+      image: debian:stable
     steps:
       - uses: actions/checkout@v3
       - run: apt-get update
-      - run: apt-get install -y sudo unzip
+      - run: apt-get install -y sudo unzip curl
       - uses: ./
