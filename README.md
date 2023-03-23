@@ -14,6 +14,5 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2
       - uses: quipper/setup-aws-cli-action@main
 ```
