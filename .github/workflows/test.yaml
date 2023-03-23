@@ -9,6 +9,7 @@ on:
 jobs:
   when-aws-cli-does-not-exist:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3
       # delete preexisting one
@@ -17,6 +18,16 @@ jobs:
 
   when-aws-cli-already-exists:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+
+  in-container:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    container:
+      image: debian:stable
     steps:
       - uses: actions/checkout@v3
       - uses: ./
