@@ -31,5 +31,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: apt-get update
-      - run: apt-get install -y unzip
+      - run: apt-get install -y sudo unzip
       - uses: ./
