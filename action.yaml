@@ -3,5 +3,5 @@ description: setup aws-cli v2
 runs:
   using: composite
   steps:
-    - run: ${{ github.action_path }}/run.sh
+    - run: exec bash ${{ github.action_path }}/run.sh
       shell: bash
