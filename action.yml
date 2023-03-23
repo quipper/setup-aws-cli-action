@@ -1,7 +1,0 @@
-name: setup-aws-cli
-description: setup aws-cli v2
-runs:
-  using: composite
-  steps:
-    - run: ${{ github.action_path }}/run.sh
-      shell: bash
