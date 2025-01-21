@@ -7,6 +7,9 @@ runs:
     - shell: bash
       run: |
         set -eux
+        if aws --version; then
+          exit
+        fi
         cd "$(mktemp -d)"
         curl -sf "https://awscli.amazonaws.com/awscli-exe-linux-$(uname -m).zip" -o awscliv2.zip
         unzip -q awscliv2.zip
